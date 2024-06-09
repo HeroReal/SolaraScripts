@@ -24,3 +24,8 @@ Scripts For Solara Executor
 ![image](https://github.com/HeroReal/SolaraScripts/assets/172195499/2f41e7d1-9235-47ea-9601-3b08570a6840)
 
 ![image](https://github.com/HeroReal/SolaraScripts/assets/172195499/ebeef6a2-be51-41c0-b053-4d4748ce7ab8)
+
+![image](https://github.com/HeroReal/SolaraScripts/assets/172195499/699a9dc2-6a9c-479e-bf80-8b2ffec758ce)
+
+---------------------------------------------------------------
+IS NOT A RAT
