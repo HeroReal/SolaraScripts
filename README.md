@@ -7,7 +7,7 @@ Scripts For Solara Executor
 2. Create a new Userscript
 3. Copy this Script/Code and paste into Tampermonkey/Userscript
 4. Save the Userscript
-5. Open Roblox and Press "P"
+5. Open www.roblox.com and Press "P"
 
 
    Optional
