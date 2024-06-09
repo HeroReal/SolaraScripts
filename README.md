@@ -8,12 +8,12 @@ Scripts For Solara Executor
 3. Copy this Script/Code and paste into Tampermonkey/Userscript
 4. Save the Userscript
 5. Open www.roblox.com and Press "P"
+---------------------------------------------------------------
 
-
-   Optional
-Choose a Website
-Get a script and paste into Solara Executor
-Have Fun Exploiting!
+--Optional--
+1. Choose a Website
+2. Get a script and paste into Solara Executor
+3. Have Fun Exploiting!
 
 ![image](https://github.com/HeroReal/SolaraScripts/assets/172195499/81f94e06-534d-4ec3-846f-24e52a4b06a6)
 
