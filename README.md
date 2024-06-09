@@ -11,8 +11,9 @@ Scripts For Solara Executor
 
 
    Optional
-1. Choose a Website
-2. Get a script and paste into Solara Executor
+Choose a Website
+Get a script and paste into Solara Executor
+Have Fun Exploiting!
 
 ![image](https://github.com/HeroReal/SolaraScripts/assets/172195499/81f94e06-534d-4ec3-846f-24e52a4b06a6)
 
