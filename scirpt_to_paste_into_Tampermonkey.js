@@ -6,7 +6,7 @@
 // @author       -
 // @match        *://*.roblox.com/*
 // @downloadURL  https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/scirpt_to_paste_into_Tampermonkey.js
-// @updateURL    https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/script_to_paste_into_Tampermonkey.js
+// @updateURL    https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/scirpt_to_paste_into_Tampermonkey.js
 // @grant        none
 // @icon         https://github.com/HeroReal/SolaraScripts/assets/172195499/6b705cdc-6e5e-461c-9da7-72b53d9414ad
 // ==/UserScript==
