@@ -53,9 +53,13 @@
         button.style.transition = 'transform 0.2s ease';
         button.onmousedown = () => {
             button.style.transform = 'scale(0.95)';
-            setTimeout(() => window.location.href = url, 200); // Redirect after animation completes
+            setTimeout(() => {
+                window.location.href = url;
+            }, 200); // Redirect after animation completes
         };
-        button.onmouseup = () => button.style.transform = 'scale(1)';
+        button.onmouseup = () => {
+            button.style.transform = 'scale(1)';
+        };
         return button;
     }
 
@@ -128,9 +132,13 @@
         mobileToggleButton.style.transition = 'transform 0.2s ease';
         mobileToggleButton.onmousedown = () => {
             mobileToggleButton.style.transform = 'scale(0.95)';
-            setTimeout(() => toggleFrame(true), 200); // Open frame after animation completes
+            setTimeout(() => {
+                toggleFrame(true);
+            }, 200); // Open frame after animation completes
         };
-        mobileToggleButton.onmouseup = () => mobileToggleButton.style.transform = 'scale(1)';
+        mobileToggleButton.onmouseup = () => {
+            mobileToggleButton.style.transform = 'scale(1)';
+        };
         document.body.appendChild(mobileToggleButton);
     }
 
@@ -156,9 +164,13 @@
         closeButton.style.transition = 'transform 0.2s ease';
         closeButton.onmousedown = () => {
             closeButton.style.transform = 'scale(0.95)';
-            setTimeout(() => toggleFrame(false), 200); // Close frame after animation completes
+            setTimeout(() => {
+                toggleFrame(false);
+            }, 200); // Close frame after animation completes
         };
-        closeButton.onmouseup = () => closeButton.style.transform = 'scale(1)';
+        closeButton.onmouseup = () => {
+            closeButton.style.transform = 'scale(1)';
+        };
         frame.appendChild(closeButton);
     }
 
