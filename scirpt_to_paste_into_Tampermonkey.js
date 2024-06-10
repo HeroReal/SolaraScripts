@@ -1,13 +1,14 @@
 // ==UserScript==
-// @name         Hyperion! Goofy
+// @name         -
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  Opens a neumorphic frame with animation on "P" key press, containing multiple buttons that link to websites. The frame is movable, buttons have smooth click animations, and supports mobile with a dedicated toggle button and close button inside the frame.
-// @author       HeroReal
+// @version      1.21
+// @description  -
+// @author       -
 // @match        *://*.roblox.com/*
-// @updateURL    https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/scirpt_to_paste_into_Tampermonkey.js
-// @downloadURL  https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/scirpt_to_paste_into_Tampermonkey.js
+// @updateURL    https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/script_to_paste_into_Tampermonkey.js
+// @downloadURL  https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/script_to_paste_into_Tampermonkey.js
 // @grant        none
+// @icon         https://github.com/HeroReal/SolaraScripts/assets/172195499/6b705cdc-6e5e-461c-9da7-72b53d9414ad
 // ==/UserScript==
 
 (function() {
@@ -160,7 +161,7 @@
         closeButton.style.border = 'none';
         closeButton.style.borderRadius = '5px';
         closeButton.style.backgroundColor = '#f0f0f0'; // Match button background to frame
-        closeButton.style.boxShadow = '5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff'; // Soft shadows for button
+        closeButton.style.boxShadow = 'inset 5px 5px 10px #d9d9d9, inset -5px -5px 10px #ffffff'; // Inset shadows for button
         closeButton.style.transition = 'transform 0.2s ease';
         closeButton.onmousedown = () => {
             closeButton.style.transform = 'scale(0.95)';
@@ -173,5 +174,4 @@
         };
         frame.appendChild(closeButton);
     }
-
 })();
