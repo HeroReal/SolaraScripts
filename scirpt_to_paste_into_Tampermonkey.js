@@ -5,8 +5,8 @@
 // @description  Opens a neumorphic frame with animation on "P" key press, containing multiple buttons that link to websites. The frame is movable, buttons have smooth click animations, and supports mobile with a dedicated toggle button and close button inside the frame.
 // @author       YourName
 // @match        *://*.roblox.com/*
-// @updateURL    https://raw.githubusercontent.com/YourUsername/YourRepo/main/script.user.js
-// @downloadURL  https://raw.githubusercontent.com/YourUsername/YourRepo/main/script.user.js
+// @updateURL    https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/scirpt_to_paste_into_Tampermonkey.js
+// @downloadURL  https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/scirpt_to_paste_into_Tampermonkey.js
 // @grant        none
 // ==/UserScript==
 
