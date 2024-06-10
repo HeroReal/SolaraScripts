@@ -13,6 +13,9 @@
 (function() {
     'use strict';
 
+    // Check if the user is on a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
     // Create and style the frame
     const frame = document.createElement('div');
     frame.style.position = 'fixed';
@@ -67,26 +70,30 @@
 
     buttons.forEach(button => frame.appendChild(button));
 
-    // Listen for the "P" key press to toggle the frame
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'p' || event.key === 'P') {
-            if (frame.style.transform === 'translate(-50%, -50%) scale(0)') {
-                frame.style.transform = 'translate(-50%, -50%) scale(1)';
-            } else {
-                frame.style.transform = 'translate(-50%, -50%) scale(0)';
+    // Listen for the "P" key press to toggle the frame on desktop
+    if (!isMobile) {
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'p' || event.key === 'P') {
+                if (frame.style.transform === 'translate(-50%, -50%) scale(0)') {
+                    frame.style.transform = 'translate(-50%, -50%) scale(1)';
+                } else {
+                    frame.style.transform = 'translate(-50%, -50%) scale(0)';
+                }
             }
-        }
-    });
+        });
+    }
 
     // Add dragging functionality
     let isDragging = false;
     let offsetX, offsetY;
 
     frame.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        offsetX = e.clientX - frame.getBoundingClientRect().left;
-        offsetY = e.clientY - frame.getBoundingClientRect().top;
-        frame.style.cursor = 'grabbing';
+        if (!isMobile) {
+            isDragging = true;
+            offsetX = e.clientX - frame.getBoundingClientRect().left;
+            offsetY = e.clientY - frame.getBoundingClientRect().top;
+            frame.style.cursor = 'grabbing';
+        }
     });
 
     document.addEventListener('mousemove', (e) => {
@@ -103,4 +110,56 @@
             frame.style.cursor = 'move';
         }
     });
+
+    // Create and style the mobile toggle button
+    if (isMobile) {
+        const mobileToggleButton = document.createElement('button');
+        mobileToggleButton.innerText = 'Open Frame';
+        mobileToggleButton.style.position = 'fixed';
+        mobileToggleButton.style.bottom = '20px';
+        mobileToggleButton.style.right = '20px';
+        mobileToggleButton.style.padding = '10px 20px';
+        mobileToggleButton.style.fontSize = '16px';
+        mobileToggleButton.style.cursor = 'pointer';
+        mobileToggleButton.style.border = 'none';
+        mobileToggleButton.style.borderRadius = '10px';
+        mobileToggleButton.style.backgroundColor = '#f0f0f0'; // Match button background to frame
+        mobileToggleButton.style.boxShadow = '5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff'; // Soft shadows for button
+        mobileToggleButton.style.transition = 'transform 0.2s ease';
+        mobileToggleButton.onmousedown = () => {
+            mobileToggleButton.style.transform = 'scale(0.95)';
+            setTimeout(() => toggleFrame(true), 200); // Open frame after animation completes
+        };
+        mobileToggleButton.onmouseup = () => mobileToggleButton.style.transform = 'scale(1)';
+        document.body.appendChild(mobileToggleButton);
+    }
+
+    // Function to toggle frame visibility
+    function toggleFrame(show) {
+        frame.style.transform = show ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0)';
+    }
+
+    // Create and style the close button for the frame
+    if (isMobile) {
+        const closeButton = document.createElement('button');
+        closeButton.innerText = 'X';
+        closeButton.style.position = 'absolute';
+        closeButton.style.top = '10px';
+        closeButton.style.right = '10px';
+        closeButton.style.padding = '5px 10px';
+        closeButton.style.fontSize = '14px';
+        closeButton.style.cursor = 'pointer';
+        closeButton.style.border = 'none';
+        closeButton.style.borderRadius = '5px';
+        closeButton.style.backgroundColor = '#f0f0f0'; // Match button background to frame
+        closeButton.style.boxShadow = '5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff'; // Soft shadows for button
+        closeButton.style.transition = 'transform 0.2s ease';
+        closeButton.onmousedown = () => {
+            closeButton.style.transform = 'scale(0.95)';
+            setTimeout(() => toggleFrame(false), 200); // Close frame after animation completes
+        };
+        closeButton.onmouseup = () => closeButton.style.transform = 'scale(1)';
+        frame.appendChild(closeButton);
+    }
+
 })();
