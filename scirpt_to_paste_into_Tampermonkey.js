@@ -1,10 +1,12 @@
 // ==UserScript==
-// @name         hyperion!
+// @name         Neumorphic Movable Frame with Buttons for Roblox
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  --
-// @author       HeroReal
+// @version      1.2
+// @description  Opens a neumorphic frame with animation on "P" key press, containing multiple buttons that link to websites. The frame is movable, buttons have smooth click animations, and supports mobile with a dedicated toggle button and close button inside the frame.
+// @author       YourName
 // @match        *://*.roblox.com/*
+// @updateURL    https://raw.githubusercontent.com/YourUsername/YourRepo/main/script.user.js
+// @downloadURL  https://raw.githubusercontent.com/YourUsername/YourRepo/main/script.user.js
 // @grant        none
 // ==/UserScript==
 
