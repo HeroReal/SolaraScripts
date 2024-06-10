@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         -
+// @name         Neumorphic Movable Frame with Buttons for Roblox
 // @namespace    http://tampermonkey.net/
-// @version      1.22
-// @description  -
-// @author       -
+// @version      1.21
+// @description  Opens a neumorphic frame with animation on "P" key press, containing multiple buttons that link to websites. The frame is movable, buttons have smooth click animations, and supports mobile with a dedicated toggle button and close button inside the frame.
+// @author       HeroReal
 // @match        *://*.roblox.com/*
-// @downloadURL  https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/scirpt_to_paste_into_Tampermonkey.js
-// @updateURL    https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/scirpt_to_paste_into_Tampermonkey.js
+// @updateURL    https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/script_to_paste_into_Tampermonkey.js
+// @downloadURL  https://raw.githubusercontent.com/HeroReal/SolaraScripts/main/script_to_paste_into_Tampermonkey.js
 // @grant        none
 // @icon         https://github.com/HeroReal/SolaraScripts/assets/172195499/6b705cdc-6e5e-461c-9da7-72b53d9414ad
 // ==/UserScript==
