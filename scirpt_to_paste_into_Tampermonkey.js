@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         -
 // @namespace    http://tampermonkey.net/
-// @version      1.21
+// @version      1.1
 // @description  -
 // @author       -
 // @match        *://*.roblox.com/*
@@ -38,6 +38,20 @@
     frame.style.boxSizing = 'border-box';
     frame.style.cursor = 'move';
     document.body.appendChild(frame);
+
+    // Create and style the version text
+    const versionText = document.createElement('div');
+    versionText.innerText = 'V1.21 - Made By HeroReal';
+    versionText.style.position = 'absolute';
+    versionText.style.bottom = '10px';
+    versionText.style.right = '10px';
+    versionText.style.fontSize = '14px';
+    versionText.style.background = 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)';
+    versionText.style.backgroundClip = 'text';
+    versionText.style.color = 'transparent';
+    versionText.style.fontWeight = 'bold';
+    versionText.style.userSelect = 'none'; // Prevent text selection
+    frame.appendChild(versionText);
 
     // Function to create and style buttons
     function createButton(text, url) {
@@ -79,11 +93,7 @@
     if (!isMobile) {
         document.addEventListener('keydown', (event) => {
             if (event.key === 'p' || event.key === 'P') {
-                if (frame.style.transform === 'translate(-50%, -50%) scale(0)') {
-                    frame.style.transform = 'translate(-50%, -50%) scale(1)';
-                } else {
-                    frame.style.transform = 'translate(-50%, -50%) scale(0)';
-                }
+                toggleFrame();
             }
         });
     }
@@ -145,7 +155,9 @@
 
     // Function to toggle frame visibility
     function toggleFrame(show) {
-        frame.style.transform = show ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0)';
+        const isVisible = frame.style.transform === 'translate(-50%, -50%) scale(1)';
+        frame.style.transform = isVisible ? 'translate(-50%, -50%) scale(0)' : 'translate(-50%, -50%) scale(1)';
+        versionText.style.display = isVisible ? 'none' : 'block'; // Show/hide version text
     }
 
     // Create and style the close button for the frame
