@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         -
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.22
 // @description  -
 // @author       -
 // @match        *://*.roblox.com/*
